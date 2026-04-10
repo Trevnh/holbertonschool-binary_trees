@@ -28,7 +28,7 @@ size_t depth_check(const binary_tree_t *tree)
 int is_perfect_recursion(const binary_tree_t *tree, size_t depth)
 {
 	if (tree == NULL)
-		return (1);
+		return (0);
 	if (tree->left == NULL && tree->right == NULL)
 		return (depth == 1);
 	if (tree->left == NULL || tree->right == NULL)
@@ -47,5 +47,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	size_t d = depth_check(tree);
 
-	return(is_perfect_recursion(tree, d));
+	return (is_perfect_recursion(tree, d));
 }
